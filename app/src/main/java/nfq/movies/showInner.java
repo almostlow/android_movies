@@ -6,8 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -63,6 +65,8 @@ public class showInner extends AppCompatActivity {
                         descriptionView.setText(description);
                         TextView yearView = (TextView)findViewById(R.id.year);
                         yearView.setText(year);
+                        RelativeLayout rel = (RelativeLayout)findViewById(R.id.relative);
+                        rel.setVisibility(View.VISIBLE);
                     }
                     progress.dismiss();
 
