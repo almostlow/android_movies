@@ -48,6 +48,7 @@ public class Result extends AppCompatActivity {
             public void run() {
                 JSONParser jParser = new JSONParser();
                 String title = getIntent().getStringExtra("movie");
+                title = title.replace(" ", "%20");
                 String json = jParser.getJSONFromUrl("http://www.theimdbapi.org/api/find/movie?title="+title);
                 setText(json, progress);
             }

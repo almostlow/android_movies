@@ -60,7 +60,7 @@ public class showInner extends AppCompatActivity {
                         TextView textView = (TextView)findViewById(R.id.text);
                         textView.setText(title);
                         RatingBar ratingBar = (RatingBar)findViewById(R.id.ratingBar);
-                        ratingBar.setRating(Float.parseFloat(rating));
+                        ratingBar.setRating(Float.parseFloat(rating)/2);
                         TextView descriptionView = (TextView)findViewById(R.id.description);
                         descriptionView.setText(description);
                         TextView yearView = (TextView)findViewById(R.id.year);
