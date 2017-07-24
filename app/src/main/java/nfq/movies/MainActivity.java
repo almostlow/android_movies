@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         final EditText movie_name_input = (EditText)findViewById(R.id.movie_name);
-        final String movie_name = movie_name_input.getText().toString();
+        final String movie_name = movie_name_input.getText().toString().replaceAll("[^A-Za-z]+", "");
         if (isNetworkAvailable()) {
             if (movie_name.length() > 2) {
                 new Thread(new Runnable() {
